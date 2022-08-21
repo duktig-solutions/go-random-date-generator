@@ -1,4 +1,4 @@
-package main
+package randomDataTime
 
 import (
 	"crypto/rand"
