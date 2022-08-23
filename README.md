@@ -17,7 +17,7 @@ import "github.com/duktig-solutions/go-random-date-generator"
 
 func main()  {
     
-  randomDate, err := GenerateDate("2020-08-01", "2022-08-01")
+  randomDate, err := randomDataTime.GenerateDate("2020-08-01", "2022-08-01")
 
   if err != nil {
     panic(err) // just it...

@@ -9,7 +9,6 @@ func TestGenerateDate(t *testing.T) {
 
 	for i := 1; i <= 100; i++ {
 		result, err := GenerateDate("2020-01-01", "2022-01-01")
-
 		if err != nil {
 			t.Errorf("Method %s returned error - %s", "GenerateDate", err.Error())
 		} else {
