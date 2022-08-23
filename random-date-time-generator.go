@@ -4,6 +4,7 @@ import (
 	"crypto/rand"
 	"math/big"
 	"time"
+	"errors"
 )
 
 // GenerateDate - Random date between given dates
@@ -37,6 +38,14 @@ func GenerateDate(startDateStr, endDateStr string) (string, error) {
 // Example:
 //   _time, err := GenerateTime(10, 18)
 func GenerateTime(startTime, endTime int) (string, error) {
+
+	if startTime < 0 || startTime > 23 {
+		return "", errors.New("invalid startTime. must be 0 - 23")
+	}
+
+	if endTime < 1 || endTime > 23 {
+		return "", errors.New("invalid endTime. must be 1 - 23")
+	}
 
 	timeFrom := time.Date(1970, 01, 01, startTime, 00, 00, 00, time.UTC)
 	timeTo := time.Date(1970, 01, 01, endTime, 00, 00, 00, time.UTC)

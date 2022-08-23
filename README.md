@@ -6,7 +6,7 @@ Easy way to just import and use random **Date, Time, Date/Time and DOB (Date of 
  
 ## Usage:
 
-    go got github.com/duktig-solutions/go-random-date-generator
+    go get github.com/duktig-solutions/go-random-date-generator
 
 ### Get random date between specified values
 
@@ -122,5 +122,11 @@ The result will look like:
     1988-02-12
     1997-09-17
     1972-09-28
+
+## Tests
+
+> NOTE: Having output in test process to see results.
+
+    go test -v
 
 End of document
